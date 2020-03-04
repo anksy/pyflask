@@ -1,4 +1,4 @@
-from database.Category import Category, CategorySchema
+from database.models.Category import Category, CategorySchema
 from database import db
 
 # category schema

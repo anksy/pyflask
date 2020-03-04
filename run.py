@@ -12,6 +12,11 @@ class Serve:
 
     def register_blueprint_with_db(self):
         from app import api_bp
+
+        @self.app.route("/")
+        def index():
+            return "/"
+            
         self.app.register_blueprint(api_bp, url_prefix="/api/v1")
 
         from database import db

@@ -4,7 +4,7 @@ from database import db
 from run import Serve
 
 # import db models
-from database.Category import Category
+from database.models import *
 
 # instantiate app
 app = Serve("config").get_instance()

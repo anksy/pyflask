@@ -1,0 +1,26 @@
+version: 2
+
+jobs:
+    ogs_report:
+        docker:
+            - image: circleci/python:3.6
+        working_directory: ~/ogs_report
+        restore_cache:
+            keys: v1-dependencies-{{ checksum "requirements.txt" }}
+        steps:
+            - checkout
+            - run:
+                name: Get Python Version
+                command: python --version
+            - run:
+                name: Installing Dependencies
+                command: sudo pip install -r requirements.txt
+            - save_cache:
+                path: venv
+                key: v1-dependencies-{{ checksum "requirements.txt" }}
+
+workflows:
+    version: 2
+    ogs_wrklf:
+        jobs:
+            - ogs_report

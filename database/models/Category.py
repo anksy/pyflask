@@ -1,4 +1,4 @@
-from database import db, ma
+from database import db
 from marshmallow import Schema, fields
 
 
@@ -7,10 +7,15 @@ class Category(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(80), nullable=False)
+    description = db.Column(db.Text, default="", nullable=True)
 
-    def __init__(self, title):
+    def __init__(self, title, description):
         self.title = title
+        self.description = description
 
+    @classmethod
+    def find_by_id(cls, id):
+        return cls.query.filter_by(id = id).first()
 
 # register schema for category model
 class CategorySchema(Schema):

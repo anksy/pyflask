@@ -34,10 +34,4 @@ class Categories_List(Resource, Resposne):
             return self.success(data=category, msg="Category has been added")
         except:
             pass
-    
-    def delete(self):
-        return { "msg": "deleted" }
-    
-    def put(self):
-        return { "msg": "updated" }
         
