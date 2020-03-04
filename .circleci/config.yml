@@ -16,7 +16,7 @@ jobs:
                 name: Installing Dependencies
                 command: sudo pip install -r requirements.txt
             - save_cache:
-                path: venv
+                paths: venv
                 key: v1-dependencies-{{ checksum "requirements.txt" }}
 
 workflows:
