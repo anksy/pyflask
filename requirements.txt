@@ -11,7 +11,7 @@ flask-marshmallow==0.8.0
 Flask-Migrate==2.1.1
 Flask-RESTful==0.3.6
 flask-restplus==0.13.0
-flask-restx==0.1.1
+flask-restx==0.5.1
 Flask-Script==2.0.6
 Flask-SQLAlchemy==2.3.2
 importlib-metadata==1.5.0
