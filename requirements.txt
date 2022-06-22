@@ -26,7 +26,7 @@ MarkupSafe==1.1.1
 marshmallow==2.14.0
 marshmallow-sqlalchemy==0.13.2
 mccabe==0.6.1
-numpy==1.18.1
+numpy==1.22.0
 openpyxl==3.0.3
 pandas==1.0.1
 psycopg2==2.7.5
